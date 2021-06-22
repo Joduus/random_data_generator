@@ -7,7 +7,7 @@ namespace Random_data
     {
         static void Main(string[] args)
         {
-            if (args.Length <= 2)
+            if (args.Length < 2)
             {
                 Console.Out.WriteLine("Usage: " + System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName + " filename filesize(in GiB)");
                 return;
