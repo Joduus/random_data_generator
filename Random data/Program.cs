@@ -7,8 +7,14 @@ namespace Random_data
     {
         static void Main(string[] args)
         {
-            const string fileName = "randomdata.dat";
-            var fileSize = (long)Math.Pow(2, 30) * 5; // 5 GiB
+            if (args.Length <= 2)
+            {
+                Console.Out.WriteLine("Usage: " + System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName + " filename filesize(in GiB)");
+                return;
+            }
+            
+            string fileName = args[0];
+            var fileSize = (long)Math.Pow(2, 30) * Int32.Parse(args[1]);
             
             using (BinaryWriter binaryWriter = new BinaryWriter(File.Open(fileName, FileMode.Create)))
             {
