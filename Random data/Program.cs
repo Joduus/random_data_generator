@@ -9,7 +9,7 @@ namespace Random_data
         {
             if (args.Length < 2)
             {
-                Console.Out.WriteLine("Usage: " + System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName + " filename filesize(in GiB)");
+                Console.Out.WriteLine("Usage: " + System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName + " filename filesize(in MiB)");
                 return;
             }
             
