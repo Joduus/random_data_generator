@@ -14,7 +14,7 @@ namespace Random_data
             }
             
             string fileName = args[0];
-            var fileSize = (long)Math.Pow(2, 30) * Int32.Parse(args[1]);
+            var fileSize = (long)Math.Pow(2, 20) * Int32.Parse(args[1]); // MiB
             
             using (BinaryWriter binaryWriter = new BinaryWriter(File.Open(fileName, FileMode.Create)))
             {
